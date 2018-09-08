@@ -10,6 +10,7 @@ import team2659.paths.MidL2;
 import team2659.paths.MidL3;
 import team2659.paths.MidL4;
 import team2659.paths.MidL5;
+import team2659.paths.MidL6;
 import team2659.paths.oneCubeSwitch.MidL;
 import team2659.util.control.PathContainer;
 
@@ -19,13 +20,24 @@ public class midLL extends CommandGroup {
 		addSequential(new ResetPose(path));
 		addParallel(new SetArm(2));
 		addSequential(new DrivePath(path));
-		addSequential(new Fire());
+		
+		addParallel(new Fire());
+		addSequential(new DrivePath(new MidL2()));
+		
 		addParallel(new SetArm(0));
+		addParallel(new DrivePath(new MidL3()));
+		addSequential(new Intake());
+		addSequential(new DrivePath(new MidL4()));
+		addParallel(new SetArm(2));
+		addSequential(new DrivePath(new MidL5()));
+		addSequential(new Fire());
 		
 		addSequential(new DrivePath(new MidL2()));
 		
-		addParallel(new DrivePath(new MidL3()));
+		addParallel(new SetArm(7));
+		addParallel(new DrivePath(new MidL6()));
 		addSequential(new Intake());
+		
 		addSequential(new DrivePath(new MidL4()));
 		addParallel(new SetArm(2));
 		addSequential(new DrivePath(new MidL5()));

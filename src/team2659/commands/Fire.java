@@ -12,7 +12,7 @@ public class Fire extends Command {
 
 	protected void initialize() {
 		Robot.intake.shoot();
-		setTimeout(0.8);
+		setTimeout(0.35);
 	}
 
 	protected void execute() {

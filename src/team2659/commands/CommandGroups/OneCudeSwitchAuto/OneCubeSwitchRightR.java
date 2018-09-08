@@ -15,6 +15,7 @@ public class OneCubeSwitchRightR extends CommandGroup {
 		addParallel(new SetArm(2));
 		addSequential(new DrivePath(path));
 		addSequential(new Fire());
-		//addParallel(new SetArm(0));
+		//addSequential(new DrivePath(new RightR2()));
+		//addSequential(new SetArm(0));
 	}
 }

@@ -13,7 +13,7 @@ public class Intake extends Command {
 	}
 
 	protected void initialize() {
-		if (RobotMap.armFront.getSelectedSensorPosition(0) < -15000)
+		if (RobotMap.armFront.getSelectedSensorPosition(0) < -16000)
 			Robot.arm.setStage(0);
 	}
 

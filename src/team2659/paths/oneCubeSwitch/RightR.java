@@ -15,8 +15,8 @@ public class RightR implements PathContainer {
     public Path buildPath() {
         ArrayList<Waypoint> sWaypoints = new ArrayList<Waypoint>();
         sWaypoints.add(new Waypoint(25,55,0,0));
-        sWaypoints.add(new Waypoint(132,55,5,130));
-        sWaypoints.add(new Waypoint(145,75,0,80));
+        sWaypoints.add(new Waypoint(157,55,5,120));
+        sWaypoints.add(new Waypoint(166,81,0,60));
         
         return PathBuilder.buildPathFromWaypoints(sWaypoints);
     }

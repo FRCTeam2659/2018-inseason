@@ -15,7 +15,9 @@ public class LeftR implements PathContainer {
 	public Path buildPath() {
         ArrayList<Waypoint> sWaypoints = new ArrayList<Waypoint>();
         sWaypoints.add(new Waypoint(25,270,0,0));
-        sWaypoints.add(new Waypoint(130,270,8,150));
+        sWaypoints.add(new Waypoint(260,270,20,40));
+        sWaypoints.add(new Waypoint(260,180,0,40));
+        /*sWaypoints.add(new Waypoint(130,270,8,150));
         sWaypoints.add(new Waypoint(238,275,25,80));
         sWaypoints.add(new Waypoint(245,55,15,80));
         sWaypoints.add(new Waypoint(277,30,8,50));

@@ -15,8 +15,12 @@ public class LeftL implements PathContainer {
 	public Path buildPath() {
         ArrayList<Waypoint> sWaypoints = new ArrayList<Waypoint>();
         sWaypoints.add(new Waypoint(25,270,0,0));
-        sWaypoints.add(new Waypoint(200,270,30,150));
-        sWaypoints.add(new Waypoint(277,240,0,80));
+        sWaypoints.add(new Waypoint(120,270,25,150));
+        sWaypoints.add(new Waypoint(210,295,15,100));
+        sWaypoints.add(new Waypoint(320,295,8,75));
+        sWaypoints.add(new Waypoint(325,275,0,60));
+        //sWaypoints.add(new Waypoint(200,270,30,150));
+        //sWaypoints.add(new Waypoint(277,240,0,80));
 
         return PathBuilder.buildPathFromWaypoints(sWaypoints);
     }

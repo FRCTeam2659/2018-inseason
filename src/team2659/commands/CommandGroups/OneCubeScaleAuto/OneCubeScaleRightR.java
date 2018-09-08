@@ -6,6 +6,7 @@ import team2659.commands.Fire;
 import team2659.commands.ResetPose;
 import team2659.commands.SetArm;
 import team2659.paths.oneCubeScale.RightR;
+import team2659.paths.oneCubeScale.RightR2;
 import team2659.util.control.PathContainer;
 
 public class OneCubeScaleRightR extends CommandGroup {
@@ -14,7 +15,10 @@ public class OneCubeScaleRightR extends CommandGroup {
 		addSequential(new ResetPose(path));
 		addParallel(new SetArm(3));
 		addSequential(new DrivePath(path));
+		
+		
 		addSequential(new Fire());
-		//addParallel(new SetArm(0));
+		addSequential(new DrivePath(new RightR2()));
+		addSequential(new SetArm(1));
 	}
 }

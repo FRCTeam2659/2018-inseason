@@ -5,13 +5,11 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import team2659.commands.Fire;
 import team2659.commands.Intake;
-import team2659.commands.Outtake;
 import team2659.commands.SetArm;
 import team2659.commands.StopIntake;
 import team2659.commands.ToggleOrientation;
 import team2659.commands.shiftHigh;
 import team2659.commands.shiftLow;
-import team2659.commands.toggleArmMode;
 
 
 public class OI {
@@ -23,10 +21,10 @@ public class OI {
 		driveStick = new Joystick(0);
 		operatorStick = new Joystick(1);
 		
-		shiftLowButton = new JoystickButton(driveStick, 5);
+		shiftLowButton = new JoystickButton(driveStick, 7);
 		shiftLowButton.whenPressed(new shiftLow());
 		
-		shiftHighButton = new JoystickButton(driveStick, 6);
+		shiftHighButton = new JoystickButton(driveStick, 8);
 		shiftHighButton.whenPressed(new shiftHigh());
 		
 		toggleOrientation = new JoystickButton(driveStick, 1);
@@ -36,10 +34,10 @@ public class OI {
 		outtakeButton.whenPressed(new Fire());
 		
 		fireButton = new JoystickButton(operatorStick, 5);
-		fireButton.whenPressed(new Outtake());
+		fireButton.whenPressed(new SetArm(7));
 
-		armModeButton = new JoystickButton(operatorStick, 10);
-		armModeButton.whenPressed(new toggleArmMode());
+		//armModeButton = new JoystickButton(operatorStick, 10);
+		//armModeButton.whenPressed(new toggleArmMode());
 		
 		intakeButton = new JoystickButton(operatorStick, 8);
 		intakeButton.whileHeld(new Intake());

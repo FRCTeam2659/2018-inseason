@@ -21,9 +21,12 @@ import edu.wpi.first.wpilibj.VictorSP;
 public class RobotMap {
 	//Speed controllers 
 	public static TalonSRX leftMaster, rightMaster, leftSlave, rightSlave, leftSlave2, rightSlave2, armFront, armRear;
-	public static PWMSpeedController intakeSC, cheaterBarSC, lifterLeft, lifterRight;
+	public static PWMSpeedController intakeSC, cheaterBarSC;
+	public static PWMSpeedController climber;
+	//public static VictorSPX lifterLeft, lifterRight;
 	
 	//Pneumatics 
+	//public static Compressor mCompressor;
 	public static Solenoid liftCylinder, shooterCylinder, shooterCylinder2, shiftCylinder;
 	
 	//sensors
@@ -92,13 +95,16 @@ public class RobotMap {
 	    cheaterBarSC = new VictorSP(1);
 	    cheaterBarSC.setInverted(true);
 	    
-	    //lift
-	    lifterLeft = new VictorSP(2);//for compbot
-	    lifterRight = new VictorSP(3);
-	    //lifterLeft = new VictorSPX(0);//for practicebot
+	    //climber
+	    climber = new VictorSP(3);//for compbot
+	    
+	    //lifterRight = new VictorSP(3);
+	  //  lifterLeft = new VictorSPX(0);//for practicebot
+	    //lifterLeft.setNeutralMode(NeutralMode.Brake);
 	    //lifterRight = new VictorSPX(1);
 	    
 	    //pneumatics
+	    
 	    shiftCylinder = new Solenoid(0);
 	    liftCylinder = new Solenoid(2);
 	    shooterCylinder = new Solenoid(1);

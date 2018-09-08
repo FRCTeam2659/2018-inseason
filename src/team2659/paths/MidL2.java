@@ -14,10 +14,10 @@ import team2659.util.control.PathContainer;
 public class MidL2 implements PathContainer {
     public Path buildPath() {
         ArrayList<Waypoint> sWaypoints = new ArrayList<Waypoint>();
-        sWaypoints.add(new Waypoint(128,210,0,0));
-        sWaypoints.add(new Waypoint(100,205,5,60));
+        sWaypoints.add(new Waypoint(130,214,0,0));
+        sWaypoints.add(new Waypoint(100,210,5,60));
         sWaypoints.add(new Waypoint(75,159,5,60));
-        sWaypoints.add(new Waypoint(60,159,0,60));
+        sWaypoints.add(new Waypoint(52,159,0,60));
 
         return PathBuilder.buildPathFromWaypoints(sWaypoints);
     }

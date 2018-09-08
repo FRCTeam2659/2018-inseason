@@ -15,6 +15,5 @@ public class OneCubeSwitchLeftL extends CommandGroup {
 		addParallel(new SetArm(2));
 		addSequential(new DrivePath(path));
 		addSequential(new Fire());
-		addParallel(new SetArm(0));
 	}
 }

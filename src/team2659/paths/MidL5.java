@@ -17,7 +17,7 @@ public class MidL5 implements PathContainer {
         sWaypoints.add(new Waypoint(60,159,0,0));
         sWaypoints.add(new Waypoint(75,159,5,60));
         sWaypoints.add(new Waypoint(100,205,5,60));
-        sWaypoints.add(new Waypoint(135,210,0,60));
+        sWaypoints.add(new Waypoint(133,212,0,60));
 
         return PathBuilder.buildPathFromWaypoints(sWaypoints);
     }

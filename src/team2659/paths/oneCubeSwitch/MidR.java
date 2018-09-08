@@ -16,8 +16,8 @@ public class MidR implements PathContainer {
         ArrayList<Waypoint> sWaypoints = new ArrayList<Waypoint>();
         sWaypoints.add(new Waypoint(25,150,0,0));
         sWaypoints.add(new Waypoint(60,150,15,100));
-        sWaypoints.add(new Waypoint(85,110,10,80));
-        sWaypoints.add(new Waypoint(133,105,0,60));
+        sWaypoints.add(new Waypoint(90,115,10,80));
+        sWaypoints.add(new Waypoint(131,100,0,60));
 
         return PathBuilder.buildPathFromWaypoints(sWaypoints);
     }

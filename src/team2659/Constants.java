@@ -1,7 +1,7 @@
 package team2659;
 
 public class Constants {
-	public final static double kDriveWheelDiameterInches = 6.24,
+	public final static double kDriveWheelDiameterInches = 6.25,
 			kTrackWidthInches = 24.3,
 			highGearMaxVel = 192,
 			robotWidth = 37.8, //with bumpers

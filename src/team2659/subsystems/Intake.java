@@ -26,13 +26,13 @@ public class Intake extends Subsystem {
 		intake.set(1);
 	}
 	public void outtake() {
-		if (RobotMap.armFront.getSelectedSensorPosition(0) > -2000) {
+		if (RobotMap.armFront.getSelectedSensorPosition(0) > -10000 && RobotMap.armFront.getSelectedSensorPosition(0) < -6000) {
+			cheaterBar.set(-0.8);
+			intake.set(-0.8);
+		}
+		else {
 			cheaterBar.set(-1);
 			intake.set(-1);
-		}
-		else {	
-			cheaterBar.set(-0.7);
-			intake.set(-0.7);
 		}
 	}
 	public void shoot() {
@@ -47,7 +47,7 @@ public class Intake extends Subsystem {
 	}
 	public boolean isLoaded() {
 		currentValue = pdp.getCurrent(8); //turn this to 8
-		if (currentValue < 55)
+		if (currentValue < 54)
 			return false;
 		return true;
 	}

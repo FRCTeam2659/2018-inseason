@@ -16,6 +16,9 @@ public class ResetPose extends Command {
     }
 
     protected void initialize() {
+    	Robot.arm.setStage(8);
+    	Timer.delay(0.18);
+    	Robot.arm.setStage(3);
     	RigidTransform2d startPose = mPathContainer.getStartPose();
         RobotState.getInstance().reset(Timer.getFPGATimestamp(), startPose);
     }
